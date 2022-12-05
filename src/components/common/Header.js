@@ -9,7 +9,7 @@ import { BsCart4 } from 'react-icons/bs'
 const Header = () => {
     return (
         <Div>
-            <Container className="container mx-auto px-4">
+            <Container className="max-w-container mx-auto px-4">
                 <Div className="flex justify-between items-center py-2.5 border-b border-border py-5">
                     <Div className="w-4/12 flex justify-start items-center">
                         <Div>

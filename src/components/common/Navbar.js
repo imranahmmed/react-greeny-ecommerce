@@ -8,7 +8,7 @@ import { MdPhoneAndroid } from 'react-icons/md'
 const Navbar = () => {
     return (
         <>
-            <Container className="container mx-auto px-4">
+            <Container className="max-w-container mx-auto px-4">
                 <Div className="flex justify-between items-center border-b border-border py-4">
                     <List className="flex justify-start gap-x-10 font-rubik">
                         <ListItem className="font-medium text-text cursor-pointer hover:text-primary duration-300" itemContent="Home" />

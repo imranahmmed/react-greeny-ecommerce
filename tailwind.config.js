@@ -32,7 +32,7 @@ module.exports = {
         'instagram': '#f77737'
       },
       maxWidth: {
-        'container': '50%',
+        'container': '1560px',
       },
       fontFamily: {
         'rubik': ['Rubik', 'sans-serif'],

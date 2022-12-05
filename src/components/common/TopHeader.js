@@ -9,7 +9,7 @@ import { RiMoneyDollarCircleFill } from 'react-icons/ri'
 const TopHeader = () => {
     return (
         <Div className='bg-primary'>
-            <Container className="container mx-auto px-4">
+            <Container className="max-w-container mx-auto px-4">
                 <Div className="flex justify-between items-center py-2.5">
                     <Div className='hidden lg:block w-4/12'>
                         <P className="text-white font-rubik text-sm" paraContent="Welcome to Ecomart in Your Dream Online Store!" />
