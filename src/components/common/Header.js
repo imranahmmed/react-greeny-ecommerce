@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Container from '../layouts/Container'
 import Div from '../layouts/Div';
 import Img from '../layouts/Img';
@@ -6,34 +6,37 @@ import { BiSearchAlt } from 'react-icons/bi'
 import { FaRandom } from 'react-icons/fa'
 import { AiFillHeart } from 'react-icons/ai'
 import { BsCart4 } from 'react-icons/bs'
-const Header = () => {
+import Search from '../layouts/Search';
+import Button from '../layouts/Button';
+
+
+const Header = ({ navRef, cartRef }) => {
+
     return (
         <Div>
-            <Container className="max-w-container mx-auto px-4">
+            <Container className="container mx-auto px-4">
                 <Div className="flex justify-between items-center py-2.5 border-b border-border py-5">
-                    <Div className="w-4/12 flex justify-start items-center">
-                        <Div>
-                            <a href="" className='mr-12 block'>
-                                <Img src="assets/images/logo.png" className="h-11" alt="logo" />
-                            </a>
-                        </Div>
-
-                        <Div>
-                            <a href="" className='flex justify-center items-center w-full'>
-                                <Img src="assets/images/user.png" className="rounded-full mr-2.5 h-11 w-11" alt="User Image" />
-                                <span className='text-base font-normal font-rubik'>Imran Ahammed</span>
-                            </a>
-                        </Div>
+                    <Div className='order-2 text-center lg:order-1 lg:w-2/12'>
+                        <a href="" className=''>
+                            <Img src="assets/images/logo.png" className="h-11" alt="logo" />
+                        </a>
                     </Div>
 
-                    <Div className="w-4/12">
-                        <form className="header-form">
-                            <input type="text" placeholder="Search anything..." />
-                            <button><BiSearchAlt className='i' /></button>
+                    <Div className='order-1 lg:order-2 lg:w-2/12'>
+                        <button ref={navRef} className='flex justify-center items-center w-full lg:justify-start'>
+                            <Img src="assets/images/user.png" className="rounded-full mr-2.5 h-11 w-11" alt="User Image" />
+                            <span className='hidden lg:block text-base font-normal font-rubik'>Imran Ahammed</span>
+                        </button>
+                    </Div>
+
+                    <Div className="group order-3 lg:order-3 lg:w-5/12">
+                        <form className="flex items-center bg-chalk rounded-md overflow-hidden duration-300 border-2 border-solid border-chalk group-hover:border-primary group-active:border-primary group-focus:border-primary">
+                            <Search className='w-full p-3 hidden lg:block bg-chalk outline-0 text-[15px] capitalize' placeholder='Search anything...' />
+                            <Button className='w-12 h-12 flex items-center justify-center'><BiSearchAlt className='i' /></Button>
                         </form>
                     </Div>
 
-                    <Div className="header-widget-group w-4/12 flex align-center justify-end">
+                    <Div className="hidden lg:order-4 lg:w-3/12 lg:flex align-center justify-end ">
                         <a href="" className='flex justify-center items-center relative h-11 w-11 bg-chalk text-text rounded-full duration-300 hover:bg-primary hover:text-white'>
                             <FaRandom />
                             <sub className='absolute top-[-3px] right-[-3px] bg-primary h-6 w-6 flex justify-center items-center text-white rounded-full border-2 ' >0</sub>
@@ -44,7 +47,7 @@ const Header = () => {
                             <sub className='absolute top-[-3px] right-[-3px] bg-primary h-6 w-6 flex justify-center items-center text-white rounded-full border-2 ' >0</sub>
                         </a>
 
-                        <button className='flex justify-center items-center relative h-11 w-11 bg-chalk text-text rounded-full duration-300 hover:bg-primary hover:text-white ml-6'>
+                        <button ref={cartRef} className='flex justify-center items-center relative h-11 w-11 bg-chalk text-text rounded-full duration-300 hover:bg-primary hover:text-white ml-6'>
                             <BsCart4 />
                             <sub className='absolute top-[-3px] right-[-3px] bg-primary h-6 w-6 flex justify-center items-center text-white rounded-full border-2 ' >9+</sub>
                         </button>

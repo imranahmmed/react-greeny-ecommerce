@@ -10,12 +10,12 @@ const TopHeader = () => {
     return (
         <Div className='bg-primary'>
             <Container className="max-w-container mx-auto px-4">
-                <Div className="flex justify-between items-center py-2.5">
-                    <Div className='hidden lg:block w-4/12'>
+                <Div className="flex flex-wrap justify-between items-center py-2.5">
+                    <Div className='hidden md:block md:w-full md:text-center md:mb-3 lg:mb-0 lg:block lg:w-4/12'>
                         <P className="text-white font-rubik text-sm" paraContent="Welcome to Ecomart in Your Dream Online Store!" />
                     </Div>
 
-                    <Div className="flex justify-end w-full lg:w-4/12">
+                    <Div className="flex justify-end w-full md:w-6/12 lg:w-4/12">
                         <Div className="flex items-center justify-end w-6/12 text-right px-5 border-r border-white">
                             <FaGlobeAmericas className='text-white mr-3' />
                             <select name="" id="">
@@ -35,7 +35,7 @@ const TopHeader = () => {
                         </Div>
                     </Div>
 
-                    <Div className='hidden lg:block w-4/12'>
+                    <Div className='hidden md:block md:w-6/12 lg:w-4/12'>
                         <List className="flex justify-end gap-x-10 font-rubik">
                             <ListItem className="text-white text-sm" itemContent="Offers" />
                             <ListItem className="text-white text-sm" itemContent="Need Help" />
