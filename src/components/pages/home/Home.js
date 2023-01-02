@@ -10,6 +10,7 @@ import NewProduct from './sections/NewProduct'
 import FeaturedProduct from './sections/FeaturedProduct'
 import ShopbyBrand from './sections/ShopbyBrand'
 import NewsLetter from './sections/NewsLetter'
+import ShortIntro from './sections/ShortIntro'
 const Home = () => {
 	return (
 		<>
@@ -33,6 +34,7 @@ const Home = () => {
 
 			<ShopbyBrand sectionTitle='Shop By Brands' />
 			<NewsLetter />
+			<ShortIntro/>
 		</>
 	)
 }

@@ -15,7 +15,7 @@ const Header = ({ navRef, cartRef }) => {
     return (
         <Div>
             <Container className="container mx-auto px-4">
-                <Div className="flex justify-between items-center py-2.5 border-b border-border py-5">
+                <Div className="flex justify-between items-center border-b border-border py-5">
                     <Div className='order-2 text-center lg:order-1 lg:w-2/12'>
                         <a href="" className=''>
                             <Img src="assets/images/logo.png" className="h-11" alt="logo" />
@@ -30,7 +30,7 @@ const Header = ({ navRef, cartRef }) => {
                     </Div>
 
                     <Div className="group order-3 lg:order-3 lg:w-5/12">
-                        <form className="flex items-center bg-chalk rounded-md overflow-hidden duration-300 border-2 border-solid border-chalk group-hover:border-primary group-active:border-primary group-focus:border-primary">
+                        <form className="flex items-center bg-chalk rounded-md overflow-hidden duration-300 border-2 border-solid border-primary group-hover:border-primary group-active:border-primary group-focus:border-primary">
                             <Search className='w-full p-3 hidden lg:block bg-chalk outline-0 text-[15px] capitalize' placeholder='Search anything...' />
                             <Button className='w-12 h-12 flex items-center justify-center'><BiSearchAlt className='i' /></Button>
                         </form>
