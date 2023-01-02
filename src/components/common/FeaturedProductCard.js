@@ -13,13 +13,13 @@ import { BsSuitHeartFill, BsSuitHeart } from 'react-icons/bs'
 
 const FeaturedProductCard = ({ src, productName, price, currancy, discount, discountPrice, unit, badge, badgeTitle }) => {
     return (
-        <Div className='w-6/12 px-3 mb-6'>
-            <Div className='group flex items-center  bg-white p-6 rounded-md border-transparent border hover:border-primary duration-300 cursor-pointer'>
-                <Div className='w-1/3 relative'>
+        <Div className='w-full md:w-6/12 px-3 mb-6'>
+            <Div className='group flex items-center flex-wrap lg:flex-nowrap bg-white p-6 rounded-md border-transparent border hover:border-primary duration-300 cursor-pointer'>
+                <Div className='w-full lg:w-1/3 relative'>
                     <Img src={src}></Img>
 
-                    <a href="#" className='addToFav absolute top-[-2%] right-[10%] text-2xl text-gray-chalk'><BsSuitHeart /></a>
-                    <a href="#" className='addedToFav absolute top-[-2%] right-[10%] text-2xl text-primary'><BsSuitHeartFill /></a>
+                    <a href="#" className='addToFav absolute top-[-2%] right-[3%] text-2xl text-gray-chalk'><BsSuitHeart /></a>
+                    <a href="#" className='addedToFav absolute top-[-2%] right-[3%] text-2xl text-primary'><BsSuitHeartFill /></a>
                     {badge && <Badge title={badgeTitle} className='product-label absolute top-[-2%] left-[-3%] text-center' />}
 
                     <Div className='product-widget flex gap-3 items-center mb-10 justify-center absolute top-[100%] left-[50%] translate-x-[-50%] translate-y-[-50%] duration-300 ease-in invisible group-hover:visible group-hover:mb-0 group-hover:top-[85%]'>
@@ -28,8 +28,7 @@ const FeaturedProductCard = ({ src, productName, price, currancy, discount, disc
                         <a href="#" className='product-view w-10 h-10 bg-primary text-white flex items-center justify-center text-xl rounded-sm'><AiFillEye /></a>
                     </Div>
                 </Div>
-
-                <Div className='w-2/3 ml-6 pl-6 border-l border-border'>
+                <Div className='w-full lg:w-2/3 lg:ml-6 lg:pl-6 lg:border-l border-border'>
                     <Div className='product-content capitalize text-sub-heading text-base font-medium text-start'>
                         <h6 className='text-xl'>{productName}</h6>
                     </Div>
