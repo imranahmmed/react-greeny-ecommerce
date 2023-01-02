@@ -13,10 +13,10 @@ import Discountprice from './Discountprice'
 import Rating from './Rating'
 
 
-const ProductCard = ({ src, productName, price, currancy, discount, discountPrice, unit, badge, badgeTitle }) => {
+const ProductCard = ({ src, productName, price, currancy, discount, discountPrice, unit, badge, badgeTitle, outOfStock }) => {
     return (
         <Div className='Product w-full sm:w-3/6 lg:w-1/4 xl:w-1/5 2xl:w-1/6 px-3 mb-6'>
-            <Div className='group bg-white p-3 text-center rounded-md border-transparent border relative hover:border-primary duration-300 cursor-pointer'>
+            <Div className='group bg-white p-3 text-center rounded-md border-transparent border relative hover:border-primary duration-300 cursor-pointer overflow-hidden'>
                 <Img className='border-b border-border' src={src}></Img>
                 <Rating className='rating flex gap-1 justify-center my-3 items-center' />
                 <Div className='product-content capitalize text-sub-heading text-base font-medium text-center'>
@@ -40,6 +40,10 @@ const ProductCard = ({ src, productName, price, currancy, discount, discountPric
                     <a href="#" className='product-video w-10 h-10 bg-primary text-white flex items-center justify-center text-xl rounded-sm'><HiOutlinePlayPause /></a>
                     <a href="#" className='product-view w-10 h-10 bg-primary text-white flex items-center justify-center text-xl rounded-sm'><AiFillEye /></a>
                 </Div>
+
+                {outOfStock && <Div className='out_Of_Stock w-full h-full absolute top-0 left-0 bg-white-transparent flex items-center justify-center'>
+                    <h6 className='w-full bg-yellow text-white py-4'>Out Of Stock</h6>
+                </Div>}
             </Div>
         </Div>
     )

@@ -9,6 +9,7 @@ import Div from '../../layouts/Div'
 import NewProduct from './sections/NewProduct'
 import FeaturedProduct from './sections/FeaturedProduct'
 import ShopbyBrand from './sections/ShopbyBrand'
+import NewsLetter from './sections/NewsLetter'
 const Home = () => {
 	return (
 		<>
@@ -18,7 +19,7 @@ const Home = () => {
 			<Advertisement className='my-28'>
 				<Img src='assets/images/promo/home/03.jpg' className='w-full'></Img>
 			</Advertisement>
-			<NewProduct sectionTitle='Collected New Items'/>
+			<NewProduct sectionTitle='Collected New Items' />
 			<Advertisement className='my-28'>
 				<Div className='w-6/12'>
 					<Img src='assets/images/promo/home/01.jpg' className='w-full'></Img>
@@ -28,10 +29,10 @@ const Home = () => {
 					<Img src='assets/images/promo/home/02.jpg' className='w-full'></Img>
 				</Div>
 			</Advertisement>
-			<FeaturedProduct sectionTitle='Our Featured Items'/>
+			<FeaturedProduct sectionTitle='Our Featured Items' />
 
-			<ShopbyBrand sectionTitle='Shop By Brands'/>
-
+			<ShopbyBrand sectionTitle='Shop By Brands' />
+			<NewsLetter />
 		</>
 	)
 }

@@ -30,6 +30,7 @@ module.exports = {
 				'transparent': 'rgba(0, 0, 0, 0.2)',
 				'deep-transparent': 'rgba(0, 0, 0, 0.4)',
 				'black-transparent': 'rgb(0 0 0 / 50%)',
+				'white-transparent': 'rgba(255, 255, 255, 0.6)',
 				'twitter': '#00acee',
 				'google': '#e60023',
 				'instagram': '#f77737',
@@ -47,7 +48,10 @@ module.exports = {
 			},
 			backgroundImage: {
 				'banner-pattern': "url('/public/assets/images/banner-shape.png')",
-			}
+				'newsletter-bg': "url('/public/assets/images/newsletter.jpg')",
+			},
+
+
 		},
 	},
 	plugins: [],
