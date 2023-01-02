@@ -29,7 +29,7 @@ const ProductSection = ({sectionTitle}) => {
                 <ProductCard src='assets/images/product/17.jpg' productName='Fresh Green Chilis' currancy='$' price='54' discount={false} discountPrice='24' unit='kg' badge={false} badgeTitle='New' />
                 <ProductCard src='assets/images/product/18.jpg' productName='Fresh Green Chilis' currancy='$' price='54' discount={false} discountPrice='24' unit='kg' badge={true} badgeTitle='New' />
             </Container>
-            <Button className='flex items-center justify-center gap-2 px-5 py-3 mb-28 bg-white border-primary border-2 rounded-md text-primary mx-auto text-base font-medium mb-5 duration-300 hover:bg-primary hover:text-white'> <AiFillEye className='text-base' /> Show More </Button>
+            <Button className='flex items-center justify-center gap-2 px-5 py-3 mb-28 bg-white border-primary border-2 rounded-md text-primary mx-auto text-base font-medium duration-300 hover:bg-primary hover:text-white'> <AiFillEye className='text-base' /> Show More </Button>
         </Div>
     )
 }

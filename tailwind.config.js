@@ -28,6 +28,7 @@ module.exports = {
 				'facebook': '#3b5998',
 				'linkedin': '#0e76a8',
 				'transparent': 'rgba(0, 0, 0, 0.2)',
+				'deep-transparent': 'rgba(0, 0, 0, 0.4)',
 				'black-transparent': 'rgb(0 0 0 / 50%)',
 				'twitter': '#00acee',
 				'google': '#e60023',

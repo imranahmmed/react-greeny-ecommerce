@@ -8,6 +8,7 @@ import Advertisement from './sections/Advertisement'
 import Div from '../../layouts/Div'
 import NewProduct from './sections/NewProduct'
 import FeaturedProduct from './sections/FeaturedProduct'
+import ShopbyBrand from './sections/ShopbyBrand'
 const Home = () => {
 	return (
 		<>
@@ -28,6 +29,8 @@ const Home = () => {
 				</Div>
 			</Advertisement>
 			<FeaturedProduct sectionTitle='Our Featured Items'/>
+
+			<ShopbyBrand sectionTitle='Shop By Brands'/>
 
 		</>
 	)
