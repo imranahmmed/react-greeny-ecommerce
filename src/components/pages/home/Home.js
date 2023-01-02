@@ -7,6 +7,7 @@ import ProductSection from './sections/ProductSection'
 import Advertisement from './sections/Advertisement'
 import Div from '../../layouts/Div'
 import NewProduct from './sections/NewProduct'
+import FeaturedProduct from './sections/FeaturedProduct'
 const Home = () => {
 	return (
 		<>
@@ -26,6 +27,7 @@ const Home = () => {
 					<Img src='assets/images/promo/home/02.jpg' className='w-full'></Img>
 				</Div>
 			</Advertisement>
+			<FeaturedProduct sectionTitle='Our Featured Items'/>
 
 		</>
 	)
