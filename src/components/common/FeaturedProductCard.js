@@ -13,8 +13,8 @@ import { BsSuitHeartFill, BsSuitHeart } from 'react-icons/bs'
 
 const FeaturedProductCard = ({ src, productName, price, currancy, discount, discountPrice, unit, badge, badgeTitle }) => {
     return (
-        <Div className='w-full md:w-6/12 px-3 mb-6'>
-            <Div className='group flex items-center flex-wrap lg:flex-nowrap bg-white p-6 rounded-md border-transparent border hover:border-primary duration-300 cursor-pointer'>
+        <Div className='w-1/2 px-2 mb-4 sm:w-3/6 md:1/4 md:px-3 md:mb-6'>
+            <Div className='group flex items-center flex-wrap lg:flex-nowrap bg-white p-4 md:p-6 rounded-md border-transparent border hover:border-primary duration-300 cursor-pointer'>
                 <Div className='w-full lg:w-1/3 relative'>
                     <Img src={src}></Img>
 
@@ -37,7 +37,7 @@ const FeaturedProductCard = ({ src, productName, price, currancy, discount, disc
                     <Div className='product-price text-left text-base font-medium'>
                         <h6> {discount && <Discountprice currancy={currancy} discountPrice={discountPrice} />} <span className='text-primary'>{currancy}{price}<small>/{unit}</small></span></h6>
                     </Div>
-                    <p>Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
+                    <p className='hidden md:block'>Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
 
                     <Button className='product-add flex items-center justify-center gap-2 py-2 px-8 mt-3 w-full bg-border rounded text-base font-normal duration-300 group-hover:bg-primary group-hover:text-white'>
                         <BsBasketFill className='text-base' />

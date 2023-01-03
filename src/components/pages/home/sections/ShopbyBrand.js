@@ -10,7 +10,7 @@ const ShopbyBrand = ({sectionTitle}) => {
     return (
         <Div className=''>
             <SectionHeader headerTitle={sectionTitle} />
-            <Container className='container mx-auto flex flex-wrap'>
+            <Container className='container mx-auto flex flex-wrap justify-center'>
                 <BrandCard src='assets/images/brand/01.jpg' brandName='Econature' itemsCount='45' />
                 <BrandCard src='assets/images/brand/02.jpg' brandName='Econature' itemsCount='45' />
                 <BrandCard src='assets/images/brand/03.jpg' brandName='Econature' itemsCount='45' />

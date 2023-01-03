@@ -11,6 +11,8 @@ import FeaturedProduct from './sections/FeaturedProduct'
 import ShopbyBrand from './sections/ShopbyBrand'
 import NewsLetter from './sections/NewsLetter'
 import ShortIntro from './sections/ShortIntro'
+import Footer from '../../common/Footer'
+import Copyright from '../../common/Copyright'
 const Home = () => {
 	return (
 		<>
@@ -22,11 +24,11 @@ const Home = () => {
 			</Advertisement>
 			<NewProduct sectionTitle='Collected New Items' />
 			<Advertisement className='my-28'>
-				<Div className='w-6/12'>
+				<Div className='w-full lg:w-6/12'>
 					<Img src='assets/images/promo/home/01.jpg' className='w-full'></Img>
 				</Div>
 
-				<Div className='w-6/12'>
+				<Div className='w-full lg:w-6/12'>
 					<Img src='assets/images/promo/home/02.jpg' className='w-full'></Img>
 				</Div>
 			</Advertisement>
@@ -35,6 +37,8 @@ const Home = () => {
 			<ShopbyBrand sectionTitle='Shop By Brands' />
 			<NewsLetter />
 			<ShortIntro/>
+			<Footer/>
+			<Copyright/>
 		</>
 	)
 }
