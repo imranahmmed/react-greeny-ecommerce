@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from '../../layouts/Container'
 import Banner from './sections/Banner'
 import Boxcategory from './sections/Boxcategory'
 import Img from '../../layouts/Img'

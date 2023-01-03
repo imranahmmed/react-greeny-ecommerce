@@ -23,7 +23,7 @@ const NavSidebar = ({ navRef }) => {
             <Div>
                 <Div className='border-b p-5 border-border relative'>
                     <img src="assets/images/logo.png" alt="" className='h-11 m-auto' />
-                    <GiTireIronCross className='absolute top-4 right-4 text-base text-lg cursor-pointer' ref={navRef} />
+                    <GiTireIronCross className='absolute top-4 right-4 text-lg cursor-pointer' ref={navRef} />
                 </Div>
 
                 <Div className='bg-chalk py-9 text-center'>

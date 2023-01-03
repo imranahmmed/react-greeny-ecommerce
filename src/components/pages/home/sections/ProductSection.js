@@ -9,7 +9,7 @@ const ProductSection = ({sectionTitle}) => {
     return (
         <Div className=''>
             <SectionHeader headerTitle={sectionTitle} />
-            <Container className='container mx-auto flex flex-wrap'>
+            <Container className='container mx-auto flex flex-wrap px-2'>
                 <ProductCard src='assets/images/product/01.jpg' productName='Fresh Green Chilis' currancy='$' price='54' discount={true} discountPrice='24' unit='kg' badge={true} badgeTitle='New' />
                 <ProductCard src='assets/images/product/02.jpg' productName='Fresh Green Chilis' currancy='$' price='54' discount={false} discountPrice='24' unit='kg' badge={true} badgeTitle='New' />
                 <ProductCard src='assets/images/product/03.jpg' productName='Fresh Green Chilis' currancy='$' price='54' discount={true} discountPrice='24' unit='kg' badge={false} badgeTitle='New' />
