@@ -12,7 +12,7 @@ const Copyright = () => {
                     </Div>
 
                     <Div className='w-full text-center lg:w-1/2 lg:text-right'>
-                        <Div className='flex items-center justify-center lg:justify-end mt-3 gap-2'>
+                        <Div className='flex items-center justify-center lg:justify-end mt-3 lg:mt-0 gap-2'>
                             <Img src='assets/images/payment/jpg/01.jpg' />
                             <Img src='assets/images/payment/jpg/02.jpg' />
                             <Img src='assets/images/payment/jpg/03.jpg' />

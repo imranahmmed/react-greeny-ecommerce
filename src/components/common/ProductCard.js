@@ -13,9 +13,9 @@ import Discountprice from './Discountprice'
 import Rating from './Rating'
 
 
-const ProductCard = ({ src, productName, price, currancy, discount, discountPrice, unit, badge, badgeTitle, outOfStock }) => {
+const ProductCard = ({ className, src, productName, price, currancy, discount, discountPrice, unit, badge, badgeTitle, outOfStock }) => {
     return (
-        <Div className='Product w-1/2 sm:w-3/6 lg:w-1/4 xl:w-1/5 2xl:w-1/6 px-3 mb-6'>
+        <Div className={className}>
             <Div className='group bg-white p-3 text-center rounded-md border-transparent border relative hover:border-primary duration-300 cursor-pointer overflow-hidden'>
                 <Img className='border-b border-border' src={src}></Img>
                 <Rating className='rating flex gap-1 justify-center my-3 items-center' />

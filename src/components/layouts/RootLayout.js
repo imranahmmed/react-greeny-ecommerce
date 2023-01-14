@@ -2,10 +2,12 @@ import React, { useState, useEffect, useRef } from 'react'
 import TopHeader from '../common/TopHeader';
 import Header from '../common/Header';
 import Navbar from '../common/Navbar';
-import Home from '../pages/home/Home'
 import NavSidebar from '../common/NavSidebar';
 import CartSidebar from '../common/cart/CartSidebar';
 import { Outlet } from 'react-router-dom';
+
+import Footer from '../common/Footer';
+import Copyright from '../common/Copyright';
 
 const RootLayout = () => {
     let [navSidebarShow, setNavSidebarShow] = useState(false)
@@ -53,6 +55,9 @@ const RootLayout = () => {
             {navSidebarShow && <NavSidebar navRef={navRef} />}
             {cartSidebarShow && <CartSidebar cartRef={cartRef} />}
             <Outlet />
+
+            <Footer />
+            <Copyright />
         </>
     )
 }

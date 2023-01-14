@@ -36,8 +36,6 @@ const Home = () => {
 			<ShopbyBrand sectionTitle='Shop By Brands' />
 			<NewsLetter />
 			<ShortIntro/>
-			<Footer/>
-			<Copyright/>
 		</>
 	)
 }

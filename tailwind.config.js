@@ -31,6 +31,8 @@ module.exports = {
 				'deep-transparent': 'rgba(0, 0, 0, 0.4)',
 				'black-transparent': 'rgb(0 0 0 / 50%)',
 				'white-transparent': 'rgba(255, 255, 255, 0.6)',
+				'darkBlue-transparent': 'rgba(6, 23, 56, 1.6)',
+				'green-transparent': 'rgba(17, 151, 68, 1)',
 				'twitter': '#00acee',
 				'google': '#e60023',
 				'instagram': '#f77737',
@@ -49,6 +51,7 @@ module.exports = {
 			backgroundImage: {
 				'banner-pattern': "url('/public/assets/images/banner-shape.png')",
 				'newsletter-bg': "url('/public/assets/images/newsletter.jpg')",
+				'hero-bg': "url('/public/assets/images/single-banner.jpg')",
 			},
 
 
