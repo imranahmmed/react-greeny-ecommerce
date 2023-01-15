@@ -18,7 +18,7 @@ const ProductCard = ({ className, src, productName, price, currancy, discount, d
         <Div className={className}>
             <Div className='group bg-white p-3 text-center rounded-md border-transparent border relative hover:border-primary duration-300 cursor-pointer overflow-hidden'>
                 <Img className='border-b border-border' src={src}></Img>
-                <Rating className='rating flex gap-1 justify-center my-3 items-center' />
+                <Rating ratingStar={5} ratingNumber='75' className='rating flex gap-1 justify-center my-3 items-center' />
                 <Div className='product-content capitalize text-sub-heading text-base font-medium text-center'>
                     <h6>{productName}</h6>
                 </Div>

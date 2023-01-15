@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import ProductCard from '../common/ProductCard';
 import Div from './Div';
@@ -12,8 +12,8 @@ function Items({ currentItems }) {
     return (
         <>
             {currentItems &&
-                currentItems.map((item) => (
-                    <ProductCard key={item} className='w-2/2 sm:w-3/6 lg:w-1/3 xl:w-1/4 2xl:w-1/5 px-3 mb-6' src='assets/images/product/08.jpg' productName='Fresh Green Chilis' currancy='$' price='54' discount={true} discountPrice='24' unit='kg' badge={false} badgeTitle='New' />
+                currentItems.map((item, index) => (
+                    <ProductCard key={index} className='w-2/2 sm:w-3/6 lg:w-1/3 xl:w-1/4 2xl:w-1/4 px-3 mb-6' src='assets/images/product/08.jpg' productName='Fresh Green Chilis' currancy='$' price='54' discount={true} discountPrice='24' unit='kg' badge={false} badgeTitle='New' />
                 ))}
         </>
     );

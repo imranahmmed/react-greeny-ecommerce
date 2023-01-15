@@ -1,17 +1,17 @@
-import React from 'react'
-import Banner from './sections/Banner'
-import Boxcategory from './sections/Boxcategory'
-import Img from '../../layouts/Img'
-import ProductSection from './sections/ProductSection'
-import Advertisement from './sections/Advertisement'
-import Div from '../../layouts/Div'
-import NewProduct from './sections/NewProduct'
-import FeaturedProduct from './sections/FeaturedProduct'
-import ShopbyBrand from './sections/ShopbyBrand'
-import NewsLetter from './sections/NewsLetter'
-import ShortIntro from './sections/ShortIntro'
-import Footer from '../../common/Footer'
-import Copyright from '../../common/Copyright'
+import React from 'react';
+import Banner from './sections/Banner';
+import Boxcategory from './sections/Boxcategory';
+import Img from '../../layouts/Img';
+import ProductSection from './sections/ProductSection';
+import Advertisement from './sections/Advertisement';
+import Div from '../../layouts/Div';
+import NewProduct from './sections/NewProduct';
+import FeaturedProduct from './sections/FeaturedProduct';
+import ShopbyBrand from './sections/ShopbyBrand';
+import NewsLetter from './sections/NewsLetter';
+import ShortIntro from './sections/ShortIntro';
+
+
 const Home = () => {
 	return (
 		<>
@@ -35,7 +35,7 @@ const Home = () => {
 
 			<ShopbyBrand sectionTitle='Shop By Brands' />
 			<NewsLetter />
-			<ShortIntro/>
+			<ShortIntro />
 		</>
 	)
 }

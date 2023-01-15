@@ -27,7 +27,7 @@ module.exports = {
 				'intro-bg': '#f8fffa',
 				'facebook': '#3b5998',
 				'linkedin': '#0e76a8',
-				'transparent': 'rgba(0, 0, 0, 0.2)',
+				'transparent': 'rgba(0, 0, 0, 0)',
 				'deep-transparent': 'rgba(0, 0, 0, 0.4)',
 				'black-transparent': 'rgb(0 0 0 / 50%)',
 				'white-transparent': 'rgba(255, 255, 255, 0.6)',

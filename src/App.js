@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { BiHome } from 'react-icons/bi';
+import React from 'react'
 
 import {
 	createBrowserRouter,
 	createRoutesFromElements,
 	RouterProvider,
-	Route,
-	Link,
+	Route
 } from "react-router-dom";
 import RootLayout from './components/layouts/RootLayout';
 import Home from './components/pages/home/Home';
