@@ -11,9 +11,9 @@ import { AiFillEye, AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 import { DiGitCompare } from 'react-icons/di'
 import { BsSuitHeartFill, BsSuitHeart } from 'react-icons/bs'
 
-const FeaturedProductCard = ({ src, productName, price, currancy, discount, discountPrice, unit, badge, badgeTitle }) => {
+const FeaturedProductCard = ({ className, src, productName, price, currancy, discount, discountPrice, unit, badge, badgeTitle }) => {
     return (
-        <Div className='w-1/2 px-2 mb-4 sm:w-3/6 md:1/4 md:px-3 md:mb-6'>
+        <Div className={className}>
             <Div className='group flex items-center flex-wrap lg:flex-nowrap bg-white p-4 md:p-6 rounded-md border-transparent border hover:border-primary duration-300 cursor-pointer'>
                 <Div className='w-full lg:w-1/3 relative'>
                     <Img src={src}></Img>
@@ -33,16 +33,23 @@ const FeaturedProductCard = ({ src, productName, price, currancy, discount, disc
                         <h6 className='text-xl'>{productName}</h6>
                     </Div>
 
-                    <Rating className='rating flex gap-1 justify-start my-3 items-center' />
+                    <Rating ratingStar={4} ratingNumber='75' className='rating flex gap-1 justify-start my-3 items-center' />
                     <Div className='product-price text-left text-base font-medium'>
                         <h6> {discount && <Discountprice currancy={currancy} discountPrice={discountPrice} />} <span className='text-primary'>{currancy}{price}<small>/{unit}</small></span></h6>
                     </Div>
                     <p className='hidden md:block'>Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
+                    
+                    <Div className='flex items-center justify-center gap-3'>
+                        <Button className='product-add flex items-center justify-center gap-2 py-2 px-8 mt-3 w-full bg-border rounded text-base uppercase font-normal duration-300 group-hover:bg-primary group-hover:text-white'>
+                            <BsBasketFill className='text-base' />
+                            <span className='text-base'>Add</span>
+                        </Button>
 
-                    <Button className='product-add flex items-center justify-center gap-2 py-2 px-8 mt-3 w-full bg-border rounded text-base font-normal duration-300 group-hover:bg-primary group-hover:text-white'>
-                        <BsBasketFill className='text-base' />
-                        <span className='text-base'>Add</span>
-                    </Button>
+                        <Button className='product-add flex items-center justify-center gap-2 py-2 px-8 mt-3 w-full bg-border rounded text-base uppercase font-normal duration-300 group-hover:bg-primary group-hover:text-white'>
+                            <AiFillHeart className='text-base' />
+                            <span className='text-base'>Wishlist</span>
+                        </Button>
+                    </Div>
 
                 </Div>
             </Div>

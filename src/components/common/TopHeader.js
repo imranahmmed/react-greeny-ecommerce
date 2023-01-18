@@ -12,7 +12,7 @@ const TopHeader = () => {
             <Container className="max-w-container mx-auto px-4">
                 <Div className="flex flex-wrap justify-between items-center py-2.5">
                     <Div className='hidden md:block md:w-full md:text-center md:mb-3 lg:mb-0 lg:block lg:w-4/12'>
-                        <P className="text-white font-rubik text-sm" paraContent="Welcome to Ecomart in Your Dream Online Store!" />
+                        <P className="text-white font-rubik text-sm" paraContent="Welcome to Tazza Online Store!" />
                     </Div>
 
                     <Div className="flex justify-end w-full md:w-6/12 lg:w-4/12">

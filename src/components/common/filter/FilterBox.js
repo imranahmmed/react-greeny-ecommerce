@@ -7,7 +7,6 @@ import Button from '../../layouts/Button';
 
 const FilterBox = ({ filter, filterTitle, children, data, rating, priceBox }) => {
     let [showFilter, setShowFilter] = useState(filter);
-    console.log(data)
     return (
         <>
             {showFilter &&

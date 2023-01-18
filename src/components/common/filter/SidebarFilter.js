@@ -2,9 +2,9 @@ import React from 'react';
 import FilterBox from './FilterBox';
 import SidebarAd from './SidebarAd';
 import { rating, tags, brands, category } from '../../data/data';
-const SidebarFilter = () => {
+const SidebarFilter = ({filterRef}) => {
     return (
-        <>
+        <div ref={filterRef}>
             <SidebarAd />
 
             <FilterBox filter={true} priceBox={true} filterTitle='FILTER BY price' />
@@ -13,7 +13,7 @@ const SidebarFilter = () => {
             <FilterBox filter={true} rating={false} filterTitle='FILTER BY brands' data={brands} />
             <FilterBox filter={true} rating={false} filterTitle='FILTER BY category' data={category} />
 
-        </>
+        </div>
     )
 }
 

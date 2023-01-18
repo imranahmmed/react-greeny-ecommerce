@@ -8,10 +8,11 @@ import { Outlet } from 'react-router-dom';
 
 import Footer from '../common/Footer';
 import Copyright from '../common/Copyright';
+import MobileMenu from '../common/MobileMenu';
 
 const RootLayout = () => {
-    let [navSidebarShow, setNavSidebarShow] = useState(false)
-    let [cartSidebarShow, setCartSidebarShow] = useState(false)
+    const [navSidebarShow, setNavSidebarShow] = useState(false)
+    const [cartSidebarShow, setCartSidebarShow] = useState(false)
 
     useEffect(() => {
         function resizeWith(e) {
@@ -26,38 +27,55 @@ const RootLayout = () => {
         window.addEventListener("resize", resizeWith)
     }, [])
 
-    let navRef = useRef()
-    let cartRef = useRef()
+    const navRef = useRef()
+    const cartRef = useRef()
 
     useEffect(() => {
-        document.body.addEventListener("click", (e) => {
-            if (navRef.current.contains(e.target)) {
-                setNavSidebarShow(true);
-            } else {
-                setNavSidebarShow(false);
-            }
-        });
+        // document.body.addEventListener("click", (e) => {
+        //     if (navRef.current.contains(e.target)) {
+        //         setNavSidebarShow(true);
+        //     } else {
+        //         setNavSidebarShow(false);
+        //     }
+        // }); 
 
-        document.body.addEventListener("click", (e) => {
-            if (cartRef.current.contains(e.target)) {
-                setCartSidebarShow(true);
-            } else {
-                setCartSidebarShow(false);
-            }
-        });
+        // document.body.addEventListener("click", (e) => {
+        //     if (cartRef.current.contains(e.target)) {
+        //         setCartSidebarShow(true);
+        //     } else {
+        //         setCartSidebarShow(false);
+        //     }
+        // });
     }, [])
+
+    const handleCartSidebarShow = () => {
+        setCartSidebarShow(!cartSidebarShow)
+        // document.body.style.overflow = "hidden";
+    }
+
+    const handleNavSidebarShow = () => {
+        setNavSidebarShow(!navSidebarShow)
+        // document.body.style.overflow = "hidden";
+    }
+
 
     return (
         <>
             <TopHeader />
-            <Header cartRef={cartRef} navRef={navRef} />
+            <Header cartRef={cartRef} navRef={navRef} sideBarOnClick={handleNavSidebarShow} cartSideBarOnClick={handleCartSidebarShow} />
             <Navbar />
-            {navSidebarShow && <NavSidebar navRef={navRef} />}
-            {cartSidebarShow && <CartSidebar cartRef={cartRef} />}
-            <Outlet />
+            {navSidebarShow &&
+                <NavSidebar onClick={handleNavSidebarShow} navRef={navRef} />
+            }
 
+            {cartSidebarShow &&
+                <CartSidebar onClick={handleCartSidebarShow} cartRef={cartRef} />
+            }
+
+            <Outlet />
             <Footer />
             <Copyright />
+            <MobileMenu cartSideBarOnClick={handleCartSidebarShow}/>
         </>
     )
 }

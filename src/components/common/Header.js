@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Container from '../layouts/Container'
 import Div from '../layouts/Div';
 import Img from '../layouts/Img';
@@ -8,12 +8,13 @@ import { AiFillHeart } from 'react-icons/ai'
 import { BsCart4 } from 'react-icons/bs'
 import Search from '../layouts/Search';
 import Button from '../layouts/Button';
+import { Link } from 'react-router-dom';
 
 
-const Header = ({ navRef, cartRef }) => {
+const Header = ({ navRef, sideBarOnClick, cartSideBarOnClick }) => {
 
     return (
-        <Div>
+        <div ref={navRef}>
             <Container className="container mx-auto px-4">
                 <Div className="flex justify-between items-center border-b border-border py-5">
                     <Div className='order-2 text-center lg:order-1 lg:w-2/12'>
@@ -23,10 +24,10 @@ const Header = ({ navRef, cartRef }) => {
                     </Div>
 
                     <Div className='order-1 lg:order-2 lg:w-2/12'>
-                        <button ref={navRef} className='flex justify-center items-center w-full lg:justify-start'>
+                        <span className='flex justify-center items-center w-full lg:justify-start' onClick={sideBarOnClick}>
                             <Img src="assets/images/user.png" className="rounded-full mr-2.5 h-11 w-11" alt="User Image" />
                             <span className='hidden lg:block text-base font-normal font-rubik'>Imran Ahammed</span>
-                        </button>
+                        </span>
                     </Div>
 
                     <Div className="group order-3 lg:order-3 lg:w-5/12">
@@ -37,20 +38,21 @@ const Header = ({ navRef, cartRef }) => {
                     </Div>
 
                     <Div className="hidden lg:order-4 lg:w-3/12 lg:flex align-center justify-end ">
-                        <a href="" className='flex justify-center items-center relative h-11 w-11 bg-chalk text-text rounded-full duration-300 hover:bg-primary hover:text-white'>
+                        <Link to="#" className='flex justify-center items-center relative h-11 w-11 bg-chalk text-text rounded-full duration-300 hover:bg-primary hover:text-white'>
                             <FaRandom />
                             <sub className='absolute top-[-3px] right-[-3px] bg-primary h-6 w-6 flex justify-center items-center text-white rounded-full border-2 ' >0</sub>
-                        </a>
+                        </Link>
 
-                        <a href="" className='flex justify-center items-center relative h-11 w-11 bg-chalk text-text rounded-full duration-300 hover:bg-primary hover:text-white ml-6'>
+                        <Link to="#" className='flex justify-center items-center relative h-11 w-11 bg-chalk text-text rounded-full duration-300 hover:bg-primary hover:text-white ml-6'>
                             <AiFillHeart />
                             <sub className='absolute top-[-3px] right-[-3px] bg-primary h-6 w-6 flex justify-center items-center text-white rounded-full border-2 ' >0</sub>
-                        </a>
+                        </Link>
 
-                        <button ref={cartRef} className='flex justify-center items-center relative h-11 w-11 bg-chalk text-text rounded-full duration-300 hover:bg-primary hover:text-white ml-6'>
+                        <Link to="#" onClick={cartSideBarOnClick} className='flex justify-center items-center relative h-11 w-11 bg-chalk text-text rounded-full duration-300 hover:bg-primary hover:text-white ml-6'>
                             <BsCart4 />
                             <sub className='absolute top-[-3px] right-[-3px] bg-primary h-6 w-6 flex justify-center items-center text-white rounded-full border-2 ' >9+</sub>
-                        </button>
+                        </Link>
+
                         <Div className="ml-2">
                             <span className='text-xs uppercase whitespace-nowrap font-normal text-heading text-left duration-300 hover:text-primary'>
                                 Total price
@@ -60,7 +62,7 @@ const Header = ({ navRef, cartRef }) => {
                     </Div>
                 </Div>
             </Container>
-        </Div>
+        </div>
     )
 }
 

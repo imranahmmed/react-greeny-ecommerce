@@ -6,20 +6,18 @@ import Div from './Div';
 // Example items, to simulate fetching from another resources.
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
-console.log(items.length)
-
 function Items({ currentItems }) {
     return (
         <>
             {currentItems &&
                 currentItems.map((item, index) => (
-                    <ProductCard key={index} className='w-2/2 sm:w-3/6 lg:w-1/3 xl:w-1/4 2xl:w-1/4 px-3 mb-6' src='assets/images/product/08.jpg' productName='Fresh Green Chilis' currancy='$' price='54' discount={true} discountPrice='24' unit='kg' badge={false} badgeTitle='New' />
+                    <ProductCard key={index} className='w-full sm:w-3/6  md:w-1/3 xl:w-1/4 2xl:w-1/5 px-3 mb-6' src='assets/images/product/08.jpg' productName='Fresh Green Chilis' currancy='$' price='54' discount={true} discountPrice='24' unit='kg' badge={false} badgeTitle='New' />
                 ))}
         </>
     );
 }
 
-const Paginate = ({ itemsPerPage }) => {
+const PaginateGrid = ({ itemsPerPage }) => {
     // Here we use item offsets; we could also use page offsets
     // following the API or data you're working with.
     const [itemOffset, setItemOffset] = useState(0);
@@ -29,21 +27,22 @@ const Paginate = ({ itemsPerPage }) => {
     // from an API endpoint with useEffect and useState)
     const endOffset = itemOffset + itemsPerPage;
     const loadingItems = `Showing items from ${itemOffset + 1} to ${endOffset} of ${items.length}`;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     const currentItems = items.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(items.length / itemsPerPage);
 
     // Invoke when user click to request another page.
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % items.length;
-        console.log(
-            `User requested page number ${event.selected}, which is offset ${newOffset}`
-        );
+        // console.log(
+        //     `User requested page number ${event.selected}, which is offset ${newOffset}`
+        // );
         setItemOffset(newOffset);
     };
+    
     return (
         <>
-            <Div className='container flex flex-wrap'>
+            <Div className='flex flex-wrap mx-auto'>
                 <Items currentItems={currentItems} />
             </Div>
             <Div className='flex justify-between items-center px-4'>
@@ -70,4 +69,4 @@ const Paginate = ({ itemsPerPage }) => {
     );
 }
 
-export default Paginate
+export default PaginateGrid

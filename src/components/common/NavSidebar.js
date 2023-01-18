@@ -14,16 +14,22 @@ import { BsShop, BsBriefcaseFill } from 'react-icons/bs'
 import { MdCategory, MdContactSupport, MdPhoneAndroid, MdAlternateEmail } from 'react-icons/md'
 import { TbDiscount2 } from 'react-icons/tb'
 import { GiTireIronCross } from 'react-icons/gi'
+import { Link } from 'react-router-dom'
 
 
-const NavSidebar = ({ navRef }) => {
+const NavSidebar = ({ navRef, onClick }) => {
     let [isSignIn, setSignIn] = useState(false)
+
+    // document.body.addEventListener("mouseover", (e) => {
+    //     document.body.style.overflow = "hidden";
+    // })
+
     return (
-        <aside className='nav-sidebar w-80 h-screen fixed top-0 left-0 bg-white drop-shadow-lg sideNavShadow overflow-y-auto duration-300 z-50'>
+        <aside className='nav-sidebar w-80 h-screen fixed top-0 left-0 bg-white drop-shadow-lg sideNavShadow overflow-y-auto duration-300 z-50' ref={navRef}>
             <Div>
                 <Div className='border-b p-5 border-border relative'>
                     <img src="assets/images/logo.png" alt="" className='h-11 m-auto' />
-                    <GiTireIronCross className='absolute top-4 right-4 text-lg cursor-pointer' ref={navRef} />
+                    <GiTireIronCross className='absolute top-4 right-4 text-lg cursor-pointer' onClick={onClick} />
                 </Div>
 
                 <Div className='bg-chalk py-9 text-center'>
@@ -87,7 +93,7 @@ const NavSidebar = ({ navRef }) => {
                 </Div>
 
                 <Div className='px-5 text-sm text-center border-t border-border py-5 bg-chalk'>
-                    <P>All Rights Reserved by <a href="#" className='text-primary'>Imran Ahammed</a> </P>
+                    <P>All Rights Reserved by <Link to="#" className='text-primary'>Imran Ahammed</Link> </P>
                 </Div>
             </Div>
         </aside>
